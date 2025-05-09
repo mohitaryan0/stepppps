@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GiFootsteps } from "react-icons/gi";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -18,13 +19,20 @@ const Hero = () => {
                 </h1>
                 <p className="mb-4 text-base leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                 <GiFootsteps className="inline size-12 " />
-                Pick the vibe that matches you best and let's get started.
+                Pick the vibe that matches you best and let&apos;s get started.
                 </p>
                 <div className="grid grid-cols-1 gap-y-22 md:grid-cols-2 md:gap-x-42">
 
                   <div className="space-y-4">
                     <div className="relative aspect-square w-64 mx-auto sm:w-80 md:w-full">
-                      <img src="/images/hero/lazy.png" alt="Image 1" className="w-full h-full object-cover rounded-full shadow-[0_0_25px_5px_rgba(59,130,246,0.6)] transition duration-500" />
+                      <Image
+  src="/images/hero/lazy.png"
+  alt="Image 1"
+  width={400}
+  height={400}
+  className="w-full h-full object-cover rounded-full shadow-[0_0_25px_5px_rgba(59,130,246,0.6)] transition duration-500"
+  priority
+/>
                     </div>
                     <Link
                       href="https://nextjstemplates.com/templates/saas-starter-startup"
