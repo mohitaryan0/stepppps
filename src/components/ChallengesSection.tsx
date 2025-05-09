@@ -1,7 +1,7 @@
 'use client'
 // Removed Framer Motion import
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react"
 
 const challengesData = [
   {

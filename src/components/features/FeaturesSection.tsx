@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 const features = [
   {
@@ -43,12 +42,12 @@ const features = [
 const CardSection: React.FC = () => {
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center px-10 pt-20 pb-40 bg-white dark:bg-gray-900"
+      className="min-h-screen flex flex-col items-center justify-center px-10 pt-20 pb-40 bg-white text-black dark:bg-gray-900 dark:text-white"
     >
       {/* Heading */}
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-extrabold text-white">Features</h2>
-        <p className="text-base text-white mt-2 mb-10">
+        <h1 className="text-4xl font-extrabold text-black dark:text-white">Features</h1>
+        <p className="text-base text-black dark:text-white mt-2 mb-10">
           To get you started and keep going
         </p>
       </div>
@@ -66,13 +65,10 @@ const CardSection: React.FC = () => {
               className={`bg-white rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 overflow-hidden hover:scale-115 transform ${offset}`}
             >
               <a href={feature.href}>
-                <Image
+                <img
                   src={feature.image}
                   alt={feature.title}
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover rounded-lg shadow-[0_0_25px_5px_rgba(59,130,246,0.6)] transition duration-500"
-                  priority
+                  className="w-full h-[450px] object-contain rounded-t-xl"
                 />
               </a>
               <div className="p-4">
