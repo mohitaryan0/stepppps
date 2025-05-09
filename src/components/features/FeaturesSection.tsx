@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const features = [
   {
@@ -65,10 +66,13 @@ const CardSection: React.FC = () => {
               className={`bg-white rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300 overflow-hidden hover:scale-115 transform ${offset}`}
             >
               <a href={feature.href}>
-                <img
+                <Image
                   src={feature.image}
                   alt={feature.title}
-                  className="w-full h-[450px] object-contain rounded-t-xl"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover rounded-lg shadow-[0_0_25px_5px_rgba(59,130,246,0.6)] transition duration-500"
+                  priority
                 />
               </a>
               <div className="p-4">

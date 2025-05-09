@@ -1,25 +1,26 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { Clock } from "lucide-react"
 
 interface BlogCardProps {
   title: string
   description: string
   date: string
-  author: string
   image?: string
 }
 
-function BlogCard({ title, description, date, author, image }: BlogCardProps) {
+function BlogCard({ title, description, date, image }: BlogCardProps) {
   return (
     <div className="group relative rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] bg-white dark:bg-gray-900">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white dark:to-gray-900 opacity-90 pointer-events-none"></div>
       {image && (
         <div className="relative aspect-[4/3] w-full">
-          <img
+          <Image
             src={image}
             alt={title}
-            className="h-full w-full object-cover"
+            width={500}
+            height={375}
+            className="object-cover"
           />
         </div>
       )}

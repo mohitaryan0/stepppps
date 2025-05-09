@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { format } from "date-fns";
 import { useState } from "react";
+import Image from "next/image";
 
 
 export default function Challenges() {
@@ -22,15 +23,17 @@ export default function Challenges() {
             </CardHeader>
             <CardContent className="text-white">
               <div className="relative h-[300px] mb-6">
-                <img 
+                <Image 
                   src="/images/group-walking.jpg" 
                   alt="Group of people walking together" 
-                  className="w-full h-full object-cover rounded-lg"
+                  width={800}
+                  height={600}
+                  className="object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               </div>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Group Challenges are time to take your wellness journey to the next level for private groups. Whether it's your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes—literally!
+                Group Challenges are time to take your wellness journey to the next level for private groups. Whether it&#x27;s your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes&#x2014;literally!
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                 <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">

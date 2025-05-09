@@ -1,8 +1,6 @@
 'use client'
 // Removed Framer Motion import
-import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
+import React, { useEffect } from "react";
 const challengesData = [
   {
     title: "By Invite Only",
@@ -55,7 +53,7 @@ export default function ChallengesSection() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-8 text-center text-white dark:text-white">Walk Together, Bond Stronger</h2>
           <p className="text-xl text-center text-white dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-            Group Challenges are exclusive fitness journeys designed for private groups. Whether it's your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes—literally!
+            Group Challenges are exclusive fitness journeys designed for private groups. Whether it&rsquo;s your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes&mdash;literally!
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
