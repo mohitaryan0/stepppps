@@ -1,6 +1,8 @@
 'use client'
 // Removed Framer Motion import
-import React, { useEffect } from "react";
+
+import { useState, useEffect } from "react";
+
 const challengesData = [
   {
     title: "By Invite Only",
@@ -17,9 +19,9 @@ const challengesData = [
 ];
 
 export default function ChallengesSection() {
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
