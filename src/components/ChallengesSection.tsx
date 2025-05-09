@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const challengesData = [
   {
     title: "By Invite Only",
-    description: "These challenges are not listed for everyone. You'll need to know the group's name or have a special code to join. It's time to take your wellness journey to the next level. This keeps it personal and secure."
+    description: "These challenges are not listed for everyone. You'll need to know the group's name or have a special code to join."
   },
   {
     title: "Flexible Access",

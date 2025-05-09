@@ -30,7 +30,7 @@ export default function Challenges() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               </div>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Group ChallengeIt&apos;s time to take your wellness journey to the next level.d for private groups. Whether it's your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes—literally!
+                Group Challenges are time to take your wellness journey to the next level for private groups. Whether it's your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes—literally!
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                 <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
