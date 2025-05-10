@@ -38,7 +38,7 @@ export default function Challenges() {
             </CardHeader>
             <CardContent>
               <p className="text-white">
-                Group Challenges are exclusive fitness journeys designed for private groups. Whether it's your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes—literally!
+                Group Challenges are exclusive fitness journeys designed for private groups. Whether it&apos;s your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes—literally!
               </p>
             </CardContent>
           </Card>
