@@ -4,8 +4,11 @@ import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import { BlogCard } from "@/components/blog/BlogCard";
 import ChallengesSection from "@/components/ChallengesSection";
-import AboutSection from "@/components/AboutSection";
-import FeaturesSection from "@/components/features/FeaturesSection";
+import AboutSection from "@/components/About/AboutSection";
+
+import { CombinedFeatures3DGrid } from "./abc";
+
+import Testimonal from "@/components/Testimonal/Testimonal";
 
 const blogPosts = [
   {
@@ -59,10 +62,18 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <FeaturesSection />
-      <ChallengesSection />
 
+      <div className="bg-white dark:bg-gray-900">
+      <CombinedFeatures3DGrid />
+      </div>
+
+      <ChallengesSection />
+      <Testimonal  />
       <AboutSection />
+      
+            
+
+      
     </>
   );
 }

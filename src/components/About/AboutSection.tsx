@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="bg-white dark:bg-gray-900 text-black dark:text-white py-20 px-4 md:px-20">
+    <section className=" bg-[#203d44] dark:bg-gray-dark text-white dark:text-white py-20 px-4 md:px-20">
       <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-16">
         {/* Left Text and Image */}
         <div>
