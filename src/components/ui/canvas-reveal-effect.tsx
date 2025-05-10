@@ -210,11 +210,16 @@ const ShaderMaterial = ({
     }
   });
 
+  interface Uniform {
+    type: string;
+    value: any;
+  }
+
   const getUniforms = () => {
-    const preparedUniforms: any = {};
+    const preparedUniforms: Record<string, { value: any; type: string }> = {};
 
     for (const uniformName in uniforms) {
-      const uniform: any = uniforms[uniformName];
+      const uniform: Uniform = uniforms[uniformName];
 
       switch (uniform.type) {
         case "uniform1f":
@@ -252,6 +257,7 @@ const ShaderMaterial = ({
     preparedUniforms["u_time"] = { value: 0, type: "1f" };
     preparedUniforms["u_resolution"] = {
       value: new THREE.Vector2(size.width * 2, size.height * 2),
+      type: "2f"
     }; // Initialize u_resolution
     return preparedUniforms;
   };
@@ -284,7 +290,9 @@ const ShaderMaterial = ({
   }, [size.width, size.height, source]);
 
   return (
-    <mesh ref={ref as any}>
+    <mesh ref={ref}>
+     
+
       <planeGeometry args={[2, 2]} />
       <primitive object={material} attach="material" />
     </mesh>

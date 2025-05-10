@@ -2,6 +2,21 @@
 
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+
+export type CardType = {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+  image?: string;
+};
+
+interface CardProps {
+  card: CardType;
+  index: number;
+  hovered: number | null;
+  setHovered: React.Dispatch<React.SetStateAction<number | null>>;
+}
 
 export const Card = React.memo(
   ({
@@ -9,12 +24,7 @@ export const Card = React.memo(
     index,
     hovered,
     setHovered,
-  }: {
-    card: any;
-    index: number;
-    hovered: number | null;
-    setHovered: React.Dispatch<React.SetStateAction<number | null>>;
-  }) => (
+  }: CardProps) => (
     <div
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
@@ -23,11 +33,14 @@ export const Card = React.memo(
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
       )}
     >
-      <img
-        src={card.src}
-        alt={card.title}
-        className="object-cover absolute inset-0"
-      />
+      {card.image && (
+        <Image
+          src={card.image}
+          alt={card.title}
+          fill
+          className="object-cover"
+        />
+      )}
       <div
         className={cn(
           "absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",
@@ -49,7 +62,7 @@ type Card = {
   src: string;
 };
 
-export function FocusCards({ cards }: { cards: Card[] }) {
+export function FocusCards({ cards }: { cards: CardType[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
