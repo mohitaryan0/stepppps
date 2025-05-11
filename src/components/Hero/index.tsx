@@ -18,7 +18,7 @@ const Hero = () => {
                 </h1>
                 <p className="mb-4 text-base leading-relaxed! text-black dark:text-white sm:text-lg md:text-xl">
                 <GiFootsteps className="inline size-12 " />
-                Pick the vibe that matches you best and let's get started.
+                Pick the vibe that matches you best and let&npos;s get started.
                 </p>
                 <div className="grid grid-cols-1 gap-y-22 md:grid-cols-2 md:gap-x-42">
 
@@ -30,7 +30,7 @@ const Hero = () => {
                       href="https://nextjstemplates.com/templates/saas-starter-startup"
                       className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                       >
-                      That's me!
+                      That&npos;s me!
                     </Link>
                   </div>
                   <div className="space-y-4">
@@ -41,7 +41,7 @@ const Hero = () => {
                       href="https://github.com/NextJSTemplates/startup-nextjs"
                       className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                     >
-                      That's me!
+                      That&npos;s me!
                     </Link>
                   </div>
                 </div>
