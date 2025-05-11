@@ -1,62 +1,47 @@
 import Link from "next/link";
 import { GiFootsteps } from "react-icons/gi";
-import Image from "next/image";
 
 const Hero = () => {
   return (
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-gray-300 pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden bg-gray-300 pb-16 pt-[180px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-3 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="mb-3 -mt-6 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                 Where do you belong on your wellness journey?
                  
                 </h1>
-                <p className="mb-4 text-base leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                <p className="mb-4 text-base leading-relaxed! text-black dark:text-white sm:text-lg md:text-xl">
                 <GiFootsteps className="inline size-12 " />
-                Pick the vibe that matches you best and let&#x27;s get started.
+                Pick the vibe that matches you best and let's get started.
                 </p>
                 <div className="grid grid-cols-1 gap-y-22 md:grid-cols-2 md:gap-x-42">
 
                   <div className="space-y-4">
                     <div className="relative aspect-square w-64 mx-auto sm:w-80 md:w-full">
-                      <Image
-  src="/images/hero/lazy.png"
-  alt="Image 1"
-  width={400}
-  height={400}
-  className="w-full h-full object-cover rounded-full shadow-[0_0_25px_5px_rgba(59,130,246,0.6)] transition duration-500"
-  priority
-/>
+                      <img src="/images/hero/lazy.png" alt="Image 1" className="w-full h-full object-cover rounded-full shadow-[0_0_25px_5px_rgba(59,130,246,0.6)] transition duration-500" />
                     </div>
                     <Link
-                      href="/"
+                      href="https://nextjstemplates.com/templates/saas-starter-startup"
                       className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                       >
-                      That&rsquo;s me!
+                      That's me!
                     </Link>
                   </div>
                   <div className="space-y-4">
                     <div className="relative aspect-square w-64 mx-auto sm:w-80 md:w-full">
-                      <Image
-  src="/images/hero/active.png"
-  alt="Image 2"
-  width={400}
-  height={400}
-  className="w-full h-full object-cover rounded-full shadow-[0_0_25px_5px_rgba(59,130,246,0.6)] transition duration-500"
-  priority
-/>
+                      <img src="/images/hero/active.png" alt="Image 2" className="w-full h-full object-cover rounded-full shadow-[0_0_25px_5px_rgba(59,130,246,0.6)] transition duration-500" />
                     </div>
                     <Link
-                      href="/"
+                      href="https://github.com/NextJSTemplates/startup-nextjs"
                       className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                     >
-                      That&rsquo;s me!
+                      That's me!
                     </Link>
                   </div>
                 </div>

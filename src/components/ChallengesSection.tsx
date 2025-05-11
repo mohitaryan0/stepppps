@@ -1,6 +1,7 @@
 'use client'
 
 
+import React from "react";
 import { useEffect, useState } from "react"
 const text = "Walk Together, Bond Stronger";
 
@@ -48,7 +49,7 @@ export default function ChallengesSection() {
 
   return (
     <section 
-      className={`bg-[#203d44] text-white ${
+      className={`bg-teal-dark dark:bg-teal-dark text-white ${
         isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[-100px]"
       } transition-all duration-700`} 
       ref={(el) => el && el.classList.add('challenges-section')}
@@ -56,15 +57,22 @@ export default function ChallengesSection() {
       <div className="container mx-auto py-12">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-8 text-center">
-            {text.split('').map((char, index) => (
-              <span
-                key={index}
-                className="inline-block animate-gradient-letter"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {char}
-              </span>
-            ))}
+            {text.split(' ').map((word, wordIndex) => (
+                                     <React.Fragment key={wordIndex}>
+                                       {wordIndex > 0 && <span className="inline-block mx-0.1">&nbsp;</span>}
+                                       <span className="inline-block">
+                                         {word.split('').map((char, charIndex) => (
+                                           <span
+                                             key={charIndex}
+                                             className="inline-block animate-gradient-letter"
+                                             style={{ animationDelay: `${(wordIndex * 10 + charIndex) * 0.1}s` }}
+                                           >
+                                             {char}
+                                           </span>
+                                         ))}
+                                       </span>
+                                     </React.Fragment>
+                                   ))}
           </h2>
         </div>
 

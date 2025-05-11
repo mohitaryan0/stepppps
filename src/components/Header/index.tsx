@@ -43,8 +43,8 @@ const Header = () => {
       <header
         className={`header top-0 left-0 z-40 flex w-full items-center ${
           sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-9999 bg-white/80 backdrop-blur-xs transition"
-            : "absolute bg-gray-300"
+            ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-9999 bg-white/80 backdrop-blur-xs transition w-full"
+            : "absolute bg-transparent"
         }`}
       >
         <div className="container">
@@ -73,8 +73,8 @@ const Header = () => {
               
               </Link>
             </div>
-            <div className="flex w-full items-center justify-between px-4 ">
-              <div>
+            <div className="flex w-full items-center justify-between px-4 flex-wrap gap-4">
+              <div className="w-full lg:w-auto">
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
@@ -99,11 +99,11 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:flex lg:items-center lg:justify-between w-full ${
                     navbarOpen
-                      ? "visibility top-full opacity-100"
-                      : "invisible top-[120%] opacity-0"
-                  }`}
+                      ? "visibility top-full opacity-100 block"
+                      : "invisible opacity-0 hidden"
+                  } lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
                     {menuData.map((menuItem, index) => (

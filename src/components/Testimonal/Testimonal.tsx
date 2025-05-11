@@ -3,6 +3,7 @@
 import React from "react";
 import { AnimatedTestimonials } from "@/components/Testimonal/animated-testimonials";
 
+const text="What Our Users Say"
 const testimonials = [
   {
     quote: "The fitness social network feature has completely transformed my workout routine. I love connecting with other fitness enthusiasts!",
@@ -26,12 +27,28 @@ const testimonials = [
 
 const Testimonal = () => {
   return (
-    <section className="py-20 bg-gray-300 dark:bg-gray-900">
+    <section className="py-20 bg-teal-dark dark:bg-teal-dark">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <div className="text-center ">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">What Our Users Say</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300">Real experiences from our community</p>
+        <div className="text-center  ">
+          <h1 className="text-4xl font-bold mb-4 animate-gradient-letter text-white">
+             {text.split(' ').map((word, wordIndex) => (
+                          <React.Fragment key={wordIndex}>
+                            {wordIndex > 0 && <span className="inline-block mx-0.1">&nbsp;</span>}
+                            <span className="inline-block">
+                              {word.split('').map((char, charIndex) => (
+                                <span
+                                  key={charIndex}
+                                  className="inline-block animate-gradient-letter"
+                                  style={{ animationDelay: `${(wordIndex * 10 + charIndex) * 0.1}s` }}
+                                >
+                                  {char}
+                                </span>
+                              ))}
+                            </span>
+                          </React.Fragment>
+                        ))}</h1>
+          <p className="text-lg text-gray-900 dark:text-gray-400">Real experiences from our community</p>
         </div>
         
         <div className="max-w-6xl mx-auto w-full">

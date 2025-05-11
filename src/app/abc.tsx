@@ -75,7 +75,7 @@ export function CombinedFeatures3DGrid() {
 const featuresText = "Features";
 
   return (
-    <div className="bg-gray-300 dark:bg-gray-900 py-12">
+    <div className="bg-teal-dark dark:bg-teal-dark py-12">
       <div className="container mx-auto px-4">
         {/* Features Section Heading */}
         <div className="relative h-30 flex items-center justify-center group">
@@ -106,7 +106,7 @@ const featuresText = "Features";
           </span>
 
           {/* Appearing single-line message */}
-          <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-center text-lg font-medium tracking-wide text-black dark:text-white px-6 py-2 rounded select-none whitespace-nowrap">
+          <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-center text-lg font-medium tracking-wide text-white dark:text-white px-6 py-2 rounded select-none whitespace-nowrap">
             Get you started and keep going...
           </span>
         </div>
