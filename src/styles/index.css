@@ -5,6 +5,48 @@ layer(base);
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes gradientLetterAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-letter {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-green), var(--color-white));
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradientLetterAnimation 3s ease infinite;
+  color: transparent;
+}
+
+@keyframes gradientBackgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-background {
+  background: linear-gradient(45deg, var(--color-primary), var(--color-teal-dark), var(--color-light-cyan));
+  background-size: 400% 400%;
+  animation: gradientBackgroundAnimation 10s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
 @theme {
   --breakpoint-*: initial;
   --breakpoint-xs: 450px;
@@ -23,6 +65,9 @@ layer(base);
   --color-yellow: #fbb040; /* optional yellow accent */
   --color-green: #3bb273; /* green from footsteps */
   --color-teal-dark: #203d44; /* outline/stroke */
+  --color-light-cyan: #191654;
+  
+  
 
   --color-bg-color-dark: #0f1e26;
 
@@ -135,4 +180,12 @@ layer(base);
     @apply inline-flex;
   }
 }
+.clip-top {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  overflow: hidden;
+}
 
+.clip-bottom {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  overflow: hidden;
+}

@@ -2,6 +2,7 @@
 
 
 import { useEffect, useState } from "react"
+const text = "Walk Together, Bond Stronger";
 
 const challengesData = [
   {
@@ -44,6 +45,7 @@ export default function ChallengesSection() {
       }
     };
   }, []);
+
   return (
     <section 
       className={`bg-[#203d44] text-white ${
@@ -53,35 +55,46 @@ export default function ChallengesSection() {
     >
       <div className="container mx-auto py-12">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-8 text-center text-white dark:text-white">Walk Together, Bond Stronger</h2>
-          <p className="text-xl text-center text-white dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-            Group Challenges are exclusive fitness journeys designed for private groups. Whether it&rsquo;s your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes&mdash;literally!
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {challengesData.map((challenge, index) => (
-              <div
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            {text.split('').map((char, index) => (
+              <span
                 key={index}
-                className="relative"
+                className="inline-block animate-gradient-letter"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="p-6 bg-gradient-to-br from-blue-500 to-green-500 text-white hover:shadow-lg hover:scale-[1.02] transition-all duration-300 rounded-xl overflow-hidden">
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-white">{challenge.title}</h3>
-                    <p className="text-white">{challenge.description}</p>
-                  </div>
+                {char}
+              </span>
+            ))}
+          </h2>
+        </div>
+
+        <p className="text-xl text-center text-white dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+          Group Challenges are exclusive fitness journeys designed for private groups. Whether it&rsquo;s your family, friends, colleagues, or a special community, these challenges bring you closer while keeping you on your toes&mdash;literally!
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {challengesData.map((challenge, index) => (
+            <div
+              key={index}
+              className="relative"
+            >
+              <div className="p-6 animate-gradient-background text-white hover:shadow-lg hover:scale-[1.02] transition-all duration-300 rounded-xl overflow-hidden">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-white">{challenge.title}</h3>
+                  <p className="text-white">{challenge.description}</p>
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <a 
-              href="/challenges" 
-              className="inline-flex items-center px-8 py-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800"
-            >
-              Create Your Group Challenge
-            </a>
-          </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="text-left mt-12">
+          <a 
+            href="/challenges" 
+            className="inline-flex items-center px-8 py-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800"
+          >
+            Create Your Group Challenge
+          </a>
         </div>
       </div>
     </section>

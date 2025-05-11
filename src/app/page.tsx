@@ -63,9 +63,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-white dark:bg-gray-900">
+      
       <CombinedFeatures3DGrid />
-      </div>
+    
 
       <ChallengesSection />
       <Testimonal  />
