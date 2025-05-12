@@ -50,7 +50,7 @@ export default function SplitPhotoCard() {
 
               {/* Text Info */}
               <div className="absolute top-1/2 left-full -translate-y-1/2 md:top-[100%] md:left-0 md:translate-y-4 md:-translate-x-0 text-sm sm:text-base leading-6 opacity-0 group-hover:opacity-100 group-hover:ml-4 md:group-hover:ml-0 md:group-hover:translate-x-0 transition-all duration-500 z-10 w-40 sm:w-48 md:w-64 text-left pointer-events-none">
-                "I’m doing alright. No major issues — and I’d like to keep it that way. I don’t need a coach yelling at me. Just a smart way to stay on track. If that’s walking with some purpose and fun — I’m in."
+                {`I’m doing alright. No major issues — and I’d like to keep it that way. I don’t need a coach yelling at me. Just a smart way to stay on track. If that’s walking with some purpose and fun — I’m in.`}
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function SplitPhotoCard() {
 
               {/* Text Info */}
               <div className="absolute top-1/2 left-full -translate-y-1/2 md:top-[100%] md:left-0 md:translate-y-4 md:-translate-x-0 text-sm sm:text-base leading-6 opacity-0 group-hover:opacity-100 group-hover:ml-4 md:group-hover:ml-0 md:group-hover:translate-x-0 transition-all duration-500 z-10 w-40 sm:w-48 md:w-64 text-left md:text-left pointer-events-none">
-                "I’ve been sitting more than I should. My energy’s dropped, the belly’s grown, and honestly — I’m not okay with where this is heading. I’m here to take control, one small step at a time. Let’s walk this back."
+                {`I’ve been sitting more than I should. My energy’s dropped, the belly’s grown, and honestly — I’m not okay with where this is heading. I’m here to take control, one small step at a time. Let’s walk this back.`}
               </div>
             </div>
           </div>
