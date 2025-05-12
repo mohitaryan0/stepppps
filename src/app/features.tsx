@@ -81,8 +81,10 @@ export function CombinedFeatures3DGrid() {
       <div className="container mx-auto px-4">
         {/* Features Section Heading */}
         <div
-          className="relative h-30 flex items-center justify-center select-none cursor-pointer"
-          onClick={() => setIsSplit(!isSplit)}
+          className="relative h-30 flex items-center justify-center select-none cursor-pointer md:cursor-pointer"
+          onClick={() => setIsSplit(!isSplit)} // Click for mobile
+          onMouseEnter={() => setIsSplit(true)} // Hover in for desktop
+          onMouseLeave={() => setIsSplit(false)} // Hover out for desktop
         >
           {/* Top half of "Features" */}
           <span
