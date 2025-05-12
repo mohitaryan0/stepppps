@@ -1,12 +1,13 @@
 import React from "react";
 import { Metadata } from "next";
-import Hero from "@/components/Hero";
 import ChallengesSection from "@/components/ChallengesSection";
 import AboutSection from "@/components/About/AboutSection";
-import { CombinedFeatures3DGrid } from "./abc";
+import { CombinedFeatures3DGrid } from "./features";
 import AppPreview from "@/components/AppPreview/AppPreview";
 import Testimonal from "@/components/Testimonal/Testimonal";
 import BlogSection from "@/components/blog/BlogSection";
+import PhotoCard from "@/components/ax";
+
 
 
 
@@ -19,10 +20,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Hero />
+    
+     
       
 
-      
+       <PhotoCard />
       <CombinedFeatures3DGrid />
     
       <div className="py-12 bg-gray-300 dark:bg-gray-dark">
@@ -31,7 +33,9 @@ export default function Home() {
       <ChallengesSection />
       <BlogSection />
       <Testimonal  />
-      <AboutSection />
+      <AboutSection /> 
+     
+     
       
       
       
